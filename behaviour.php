@@ -109,6 +109,7 @@ class qbehaviour_deferredfeedbackonlyflagged extends question_behaviour_with_sav
             list($fraction, $state) = $this->question->grade_response($response);
             // Hack - only grade flagged questions.
             // Do note! quiz total sum of all question points/weights should exceed 100pt/%
+            //          if all questions are flagged, so please advise students.
             if (!$this->qa->is_flagged()) {
                 $fraction = 0;
             }

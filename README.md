@@ -5,6 +5,9 @@
 A simple hack to get students answer X out of Y questions in a quiz, given they marked the relevant questions they choose 
 to get a grade for with a flag.
 
+ **Do note! quiz total sum of all question points/weights should exceed 100pt/%
+          if all questions are flagged, so please advise students.**
+
 ### Setup
 * Quiz settings: choose this question behaviour ('Deferred feedback, grade only flagged')
 * Quiz settings: better hide all "Marks" under "Review options" from students as they do not show the proper filnal grades, but a confusing calculate which is good for a regular quiz without these hacking ;-)
