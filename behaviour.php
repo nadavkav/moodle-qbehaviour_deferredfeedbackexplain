@@ -107,6 +107,11 @@ class qbehaviour_deferredfeedbackonlyflagged extends question_behaviour_with_sav
             $pendingstep->set_state(question_state::$gaveup);
         } else {
             list($fraction, $state) = $this->question->grade_response($response);
+            // Hack - only grade flagged questions.
+            // Do note! quiz total sum of all question points/weights should exceed 100pt/%
+            if (!$this->qa->is_flagged()) {
+                $fraction = 0;
+            }
             $pendingstep->set_fraction($fraction);
             $pendingstep->set_state($state);
         }
